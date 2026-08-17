@@ -1,0 +1,748 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Untuk Bunga Firsty ❤️</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      min-height: 100vh;
+      overflow-x: hidden;
+      font-family: "Segoe UI", Arial, sans-serif;
+      color: white;
+      background:
+        radial-gradient(circle at 50% 30%, #6b123e 0%, transparent 35%),
+        linear-gradient(135deg, #10000d, #260015, #080008);
+    }
+
+    /* =========================
+       BACKGROUND
+    ========================== */
+
+    .stars {
+      position: fixed;
+      inset: 0;
+      overflow: hidden;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .star {
+      position: absolute;
+      width: 3px;
+      height: 3px;
+      border-radius: 50%;
+      background: white;
+      opacity: .4;
+      animation: twinkle 2s ease-in-out infinite alternate;
+    }
+
+    @keyframes twinkle {
+      from {
+        opacity: .15;
+        transform: scale(.6);
+      }
+
+      to {
+        opacity: .9;
+        transform: scale(1.4);
+      }
+    }
+
+    /* =========================
+       MAIN
+    ========================== */
+
+    .page {
+      position: relative;
+      z-index: 2;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 40px 20px;
+    }
+
+    .card {
+      width: min(700px, 100%);
+      text-align: center;
+      padding: 45px 25px;
+    }
+
+    /* =========================
+       INTRO
+    ========================== */
+
+    .intro {
+      transition: 1s ease;
+    }
+
+    .intro.hide {
+      opacity: 0;
+      transform: scale(.8);
+      pointer-events: none;
+    }
+
+    .small {
+      color: #ffb4d1;
+      font-size: 13px;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      margin-bottom: 25px;
+    }
+
+    .envelope-area {
+      cursor: pointer;
+      display: inline-block;
+      transition: .4s;
+    }
+
+    .envelope-area:hover {
+      transform: translateY(-8px);
+    }
+
+    .envelope {
+      position: relative;
+      width: 220px;
+      height: 145px;
+      margin: auto;
+      background: #ff4f91;
+      border-radius: 12px;
+      box-shadow:
+        0 20px 60px rgba(255, 42, 123, .3),
+        0 0 80px rgba(255, 42, 123, .1);
+    }
+
+    .envelope::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: #e93879;
+      clip-path: polygon(0 0, 50% 55%, 100% 0);
+      border-radius: 12px 12px 0 0;
+      transform-origin: top;
+      transition: 1s ease;
+      z-index: 3;
+    }
+
+    .envelope::after {
+      content: "❤️";
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 42px;
+      z-index: 4;
+      filter: drop-shadow(0 0 15px rgba(255,255,255,.4));
+    }
+
+    .click-text {
+      margin-top: 25px;
+      color: #ffc4d9;
+      animation: pulseText 2s infinite;
+    }
+
+    @keyframes pulseText {
+      0%, 100% {
+        opacity: .5;
+      }
+
+      50% {
+        opacity: 1;
+      }
+    }
+
+    /* =========================
+       LETTER
+    ========================== */
+
+    .letter {
+      display: none;
+      opacity: 0;
+    }
+
+    .letter.show {
+      display: block;
+      animation: appear 1.5s forwards;
+    }
+
+    @keyframes appear {
+      from {
+        opacity: 0;
+        transform: translateY(35px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .heart-main {
+      font-size: 75px;
+      animation: heartbeat 1.5s infinite;
+      filter: drop-shadow(0 0 25px rgba(255, 66, 140, .8));
+      margin-bottom: 15px;
+    }
+
+    @keyframes heartbeat {
+      0%, 100% {
+        transform: scale(1);
+      }
+
+      15% {
+        transform: scale(1.18);
+      }
+
+      30% {
+        transform: scale(1);
+      }
+
+      45% {
+        transform: scale(1.12);
+      }
+
+      60% {
+        transform: scale(1);
+      }
+    }
+
+    .to {
+      color: #ffb5d0;
+      font-size: 14px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+    }
+
+    .name {
+      margin-top: 10px;
+      font-size: clamp(42px, 9vw, 72px);
+      font-weight: 800;
+      letter-spacing: -3px;
+
+      background:
+        linear-gradient(
+          90deg,
+          #fff,
+          #ff75ad,
+          #fff,
+          #ff75ad
+        );
+
+      background-size: 300%;
+      -webkit-background-clip: text;
+      color: transparent;
+
+      animation: gradient 5s linear infinite;
+    }
+
+    @keyframes gradient {
+      0% {
+        background-position: 0%;
+      }
+
+      100% {
+        background-position: 300%;
+      }
+    }
+
+    .love-title {
+      margin-top: 15px;
+      font-size: clamp(35px, 8vw, 60px);
+      font-weight: 800;
+    }
+
+    .love-title span {
+      color: #ff5f9d;
+      text-shadow: 0 0 25px rgba(255, 63, 137, .5);
+    }
+
+    /* =========================
+       TYPEWRITER
+    ========================== */
+
+    .message-box {
+      max-width: 570px;
+      min-height: 185px;
+      margin: 30px auto 0;
+      padding: 25px;
+      border-radius: 24px;
+
+      background: rgba(255,255,255,.045);
+      border: 1px solid rgba(255,255,255,.1);
+      backdrop-filter: blur(12px);
+
+      box-shadow:
+        0 20px 60px rgba(0,0,0,.2);
+    }
+
+    #typing {
+      color: #ffe0eb;
+      line-height: 1.9;
+      font-size: 16px;
+    }
+
+    .cursor {
+      display: inline-block;
+      width: 2px;
+      height: 18px;
+      background: #ff78ab;
+      margin-left: 3px;
+      animation: blink .7s infinite;
+      vertical-align: middle;
+    }
+
+    @keyframes blink {
+      50% {
+        opacity: 0;
+      }
+    }
+
+    /* =========================
+       BUTTON
+    ========================== */
+
+    .button {
+      margin-top: 30px;
+      border: none;
+      padding: 15px 28px;
+      border-radius: 50px;
+
+      color: #a91454;
+      background: white;
+
+      font-size: 15px;
+      font-weight: 700;
+      cursor: pointer;
+
+      box-shadow:
+        0 12px 40px rgba(255, 87, 147, .25);
+
+      transition: .3s;
+    }
+
+    .button:hover {
+      transform: translateY(-5px) scale(1.03);
+      box-shadow:
+        0 20px 50px rgba(255, 87, 147, .4);
+    }
+
+    .button:active {
+      transform: scale(.95);
+    }
+
+    /* =========================
+       SURPRISE
+    ========================== */
+
+    .surprise {
+      max-height: 0;
+      overflow: hidden;
+      opacity: 0;
+      transition: 1s ease;
+    }
+
+    .surprise.open {
+      max-height: 350px;
+      opacity: 1;
+      margin-top: 30px;
+    }
+
+    .surprise-message {
+      padding: 25px;
+      border-radius: 24px;
+      background: rgba(255, 77, 139, .08);
+      border: 1px solid rgba(255, 111, 163, .15);
+    }
+
+    .surprise-message h2 {
+      font-size: 28px;
+      margin-bottom: 15px;
+    }
+
+    .surprise-message p {
+      color: #ffd8e6;
+      line-height: 1.8;
+    }
+
+    .signature {
+      margin-top: 20px;
+      color: #ff8fb8;
+      font-style: italic;
+    }
+
+    /* =========================
+       FLOATING HEARTS
+    ========================== */
+
+    .floating-heart {
+      position: fixed;
+      bottom: -50px;
+      pointer-events: none;
+      z-index: 5;
+      animation: floatHeart linear forwards;
+    }
+
+    @keyframes floatHeart {
+      0% {
+        transform:
+          translateY(0)
+          rotate(0deg)
+          scale(.8);
+        opacity: 0;
+      }
+
+      15% {
+        opacity: 1;
+      }
+
+      100% {
+        transform:
+          translateY(-110vh)
+          rotate(360deg)
+          scale(1.2);
+        opacity: 0;
+      }
+    }
+
+    /* =========================
+       MOBILE
+    ========================== */
+
+    @media(max-width:600px) {
+
+      .card {
+        padding: 30px 10px;
+      }
+
+      .envelope {
+        width: 190px;
+        height: 125px;
+      }
+
+      .message-box {
+        padding: 20px;
+      }
+
+      #typing {
+        font-size: 15px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="stars" id="stars"></div>
+
+  <main class="page">
+
+    <div class="card">
+
+      <!-- INTRO -->
+      <div class="intro" id="intro">
+
+        <div class="small">
+          Ada sesuatu untukmu...
+        </div>
+
+        <div class="envelope-area" id="openEnvelope">
+
+          <div class="envelope"></div>
+
+          <div class="click-text">
+            Klik amplopnya ❤️
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <!-- LETTER -->
+      <div class="letter" id="letter">
+
+        <div class="heart-main">
+          ❤️
+        </div>
+
+        <div class="to">
+          Untuk seseorang yang spesial
+        </div>
+
+        <div class="name">
+          Bunga Firsty
+        </div>
+
+        <div class="love-title">
+          I <span>Love</span> You ❤️
+        </div>
+
+        <div class="message-box">
+
+          <p id="typing"></p>
+          <span class="cursor"></span>
+
+        </div>
+
+        <button class="button" id="surpriseButton">
+          💌 Ada satu pesan lagi...
+        </button>
+
+        <div class="surprise" id="surprise">
+
+          <div class="surprise-message">
+
+            <h2>
+              Untuk Bunga ❤️
+            </h2>
+
+            <p>
+              Terima kasih sudah menjadi bagian indah
+              dalam hidupku.
+              <br><br>
+
+              Aku nggak tahu apa yang akan terjadi
+              di masa depan, tapi untuk sekarang,
+              aku cuma ingin kamu tahu satu hal:
+              <br><br>
+
+              <strong>
+                Aku sayang kamu, Bunga.
+                ❤️
+              </strong>
+            </p>
+
+            <div class="signature">
+              Love,<br>
+              Muhammad Jaelani ❤️
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </main>
+
+
+  <script>
+
+    /* =========================
+       CREATE STARS
+    ========================== */
+
+    const stars = document.getElementById("stars");
+
+    for (let i = 0; i < 100; i++) {
+
+      const star = document.createElement("div");
+
+      star.className = "star";
+
+      star.style.left =
+        Math.random() * 100 + "vw";
+
+      star.style.top =
+        Math.random() * 100 + "vh";
+
+      star.style.animationDelay =
+        Math.random() * 3 + "s";
+
+      stars.appendChild(star);
+    }
+
+
+    /* =========================
+       OPEN LETTER
+    ========================== */
+
+    const openEnvelope =
+      document.getElementById("openEnvelope");
+
+    const intro =
+      document.getElementById("intro");
+
+    const letter =
+      document.getElementById("letter");
+
+    openEnvelope.addEventListener("click", () => {
+
+      intro.classList.add("hide");
+
+      setTimeout(() => {
+
+        intro.style.display = "none";
+
+        letter.classList.add("show");
+
+        startTyping();
+
+        // Ledakan hati
+        for (let i = 0; i < 25; i++) {
+
+          setTimeout(() => {
+            createHeart();
+          }, i * 100);
+
+        }
+
+      }, 800);
+
+    });
+
+
+    /* =========================
+       TYPEWRITER
+    ========================== */
+
+    const text =
+      "Bunga, mungkin aku nggak selalu bisa mengatakan semua yang ada di hati aku. Tapi setiap kali aku melihat senyummu, aku selalu merasa ada satu alasan lagi untuk bersyukur. Terima kasih sudah hadir dan membuat hari-hariku terasa lebih berarti. ❤️";
+
+    const typing =
+      document.getElementById("typing");
+
+    let index = 0;
+
+    function startTyping() {
+
+      function type() {
+
+        if (index < text.length) {
+
+          typing.textContent += text.charAt(index);
+
+          index++;
+
+          let speed = 35;
+
+          if (text.charAt(index - 1) === ".") {
+            speed = 300;
+          }
+
+          if (text.charAt(index - 1) === ",") {
+            speed = 120;
+          }
+
+          setTimeout(type, speed);
+
+        }
+
+      }
+
+      type();
+    }
+
+
+    /* =========================
+       SURPRISE MESSAGE
+    ========================== */
+
+    const surpriseButton =
+      document.getElementById("surpriseButton");
+
+    const surprise =
+      document.getElementById("surprise");
+
+    surpriseButton.addEventListener("click", () => {
+
+      surprise.classList.toggle("open");
+
+      if (surprise.classList.contains("open")) {
+
+        surpriseButton.innerHTML =
+          "❤️ Muhammad Jaelani → Bunga Firsty";
+
+        // Hujan hati
+        for (let i = 0; i < 35; i++) {
+
+          setTimeout(() => {
+            createHeart();
+          }, i * 90);
+
+        }
+
+      } else {
+
+        surpriseButton.innerHTML =
+          "💌 Ada satu pesan lagi...";
+
+      }
+
+    });
+
+
+    /* =========================
+       FLOATING HEART
+    ========================== */
+
+    function createHeart() {
+
+      const heart =
+        document.createElement("div");
+
+      heart.className =
+        "floating-heart";
+
+      const emojis = [
+        "❤️",
+        "💗",
+        "💖",
+        "💕",
+        "💘",
+        "💞"
+      ];
+
+      heart.textContent =
+        emojis[
+          Math.floor(Math.random() * emojis.length)
+        ];
+
+      heart.style.left =
+        Math.random() * 100 + "vw";
+
+      heart.style.fontSize =
+        15 + Math.random() * 25 + "px";
+
+      const duration =
+        4 + Math.random() * 5;
+
+      heart.style.animationDuration =
+        duration + "s";
+
+      document.body.appendChild(heart);
+
+      setTimeout(() => {
+        heart.remove();
+      }, duration * 1000);
+    }
+
+
+    /* =========================
+       CONTINUOUS HEARTS
+    ========================== */
+
+    setInterval(() => {
+
+      createHeart();
+
+    }, 1200);
+
+  </script>
+
+</body>
+</html>
